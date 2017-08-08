@@ -72,6 +72,8 @@ namespace HttpTwo.Internal
         {
             var logMessage = args.Length == 0 ? format : string.Format(format, args);
             Console.WriteLine(DateTime.Now.ToString("hh:MM:ss.fff tt") + ": " + logMessage);
+
+            OutLoggerHooker.DebugLog(logMessage);
         }
     }
 
